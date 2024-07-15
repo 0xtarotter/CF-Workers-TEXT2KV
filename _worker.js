@@ -141,7 +141,7 @@ export default {
         <h1>URL参数不正确</h1>
         <p>请求API时出现了一个错误。</p>
         <div class="error-code">error</div>
-        <p>https://exmple.com/yourtoken</p>
+        <p>Exmple -> https://exmple.com/yourtoken</p>
         <a href="https://tiao.ma">返回所有者页面</a>
     </div>
 </body>
