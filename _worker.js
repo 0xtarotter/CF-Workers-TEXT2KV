@@ -91,23 +91,62 @@ export default {
 		} else if (url.pathname == "/"){//首页改成一个nginx伪装页
 			return new Response(`
 			<!DOCTYPE html>
-			<html>
-			<head>
-			<title> </title>
-			<style>
-				body {
-					width: 35em;
-					margin: 0 auto;
-					font-family: Tahoma, Verdana, Arial, sans-serif;
-				}
-			</style>
-			</head>
-			<body>
-			<h1>URL参数不正确</h1>
-			<p>https://exmple.com/yourtoken</p>
-			<p><em>Thank you for using.</em></p>
-			</body>
-			</html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            color: #ff6347;
+            font-size: 2.5em;
+        }
+        p {
+            color: #333;
+            font-size: 1.2em;
+        }
+        .error-code {
+            font-size: 4em;
+            margin: 20px 0;
+            color: #ff6347;
+        }
+        a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #ff6347;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        a:hover {
+            background-color: #e0533c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>URL参数不正确</h1>
+        <p>请求API时出现了一个错误。</p>
+        <div class="error-code">error</div>
+        <p>https://exmple.com/yourtoken</p>
+        <a href="https://tiao.ma">返回所有者页面</a>
+    </div>
+</body>
+</html>
+
 			`, {
 			  headers: {
 				'Content-Type': 'text/html; charset=UTF-8',
