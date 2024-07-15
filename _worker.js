@@ -104,7 +104,7 @@ export default {
 			</head>
 			<body>
 			<h1>URL参数不正确</h1>
-			<p>https://${域名}/yourtoken</p>
+			<p>https://exmple.com/yourtoken</p>
 			<p><em>Thank you for using.</em></p>
 			</body>
 			</html>
