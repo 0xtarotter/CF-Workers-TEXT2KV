@@ -93,7 +93,7 @@ export default {
 			<!DOCTYPE html>
 			<html>
 			<head>
-			<title>Welcome to nginx!</title>
+			<title> </title>
 			<style>
 				body {
 					width: 35em;
@@ -103,16 +103,9 @@ export default {
 			</style>
 			</head>
 			<body>
-			<h1>Welcome to nginx!</h1>
-			<p>If you see this page, the nginx web server is successfully installed and
-			working. Further configuration is required.</p>
-			
-			<p>For online documentation and support please refer to
-			<a href="http://nginx.org/">nginx.org</a>.<br/>
-			Commercial support is available at
-			<a href="http://nginx.com/">nginx.com</a>.</p>
-			
-			<p><em>Thank you for using nginx.</em></p>
+			<h1>URL参数不正确</h1>
+			<p>https://${域名}/yourtoken</p>
+			<p><em>Thank you for using.</em></p>
 			</body>
 			</html>
 			`, {
@@ -121,7 +114,7 @@ export default {
 			  },
 			});
 		} else {// 如果 token 不符，返回 'token 有误'//
-			return new Response('token 有误', {
+			return new Response('token 错误，已记录你的IP，请核对你的token，请勿多次错误尝试！', {
 				status: 400,
 				headers: { 'content-type': 'text/plain; charset=utf-8' },
 			});
